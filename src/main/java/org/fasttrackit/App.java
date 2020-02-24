@@ -16,6 +16,29 @@ public class App
         carRefrence.maxSpead = 260;
         carRefrence.mileage = 6.2;
 
+//        carRefrence.engine =new Engine();
+//        carRefrence.engine.manufactures = "VW";
+//        carRefrence.engine.capacity = 2000;
+
+        Engine engine1 =new Engine();
+        engine1.manufactures = "VW";
+        engine1.capacity = 2000;
+
+        carRefrence.engine = engine1;
+     // one object with two references
+
+        System.out.println("Engine details:");
+        System.out.println(engine1.capacity);
+        System.out.println(carRefrence.engine.capacity);
+
+         engine1.capacity = 2100;
+
+        System.out.println("Updated engine details:");
+        System.out.println(engine1.capacity);
+        System.out.println(carRefrence.engine.capacity);
+
+
+
        // concatenation
         System.out.println("Properties of " + carRefrence.name);
         // Color: red
@@ -26,15 +49,17 @@ public class App
         System.out.println("Damaged: " + carRefrence.damaged);
         System.out.println("Fuel level "+  carRefrence.fuelLevel);
 
-     carRefrence = null
+     carRefrence = null;
 
         Car  car2 = new Car ();
         car2.name = "Lambourghini";
         car2.damaged = true;
 
+
         System.out.println("Properties of" + car2.name);
         System.out.println("Color:" + car2.color);
         System.out.println("Damaged:" +car2.damaged);
+
 
 
     }

@@ -9,6 +9,8 @@ public class Car {
     String color;
     double fuelLevel;
     boolean damaged;
+    // "has-a" relathinship / Aggregation
+    Engine engine;
 
 
 
