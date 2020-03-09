@@ -15,6 +15,7 @@ public class App
         carRefrence.color = "red";
         carRefrence.maxSpead = 260;
         carRefrence.mileage = 6.2;
+        carRefrence.fuelLevel = 100;
 
 //        carRefrence.engine =new Engine();
 //        carRefrence.engine.manufactures = "VW";
@@ -25,6 +26,10 @@ public class App
         engine1.capacity = 2000;
 
         carRefrence.engine = engine1;
+
+       double currentDistance =  carRefrence.accelerate(60, 1);
+        System.out.println("Current distanece: " + currentDistance);
+
      // one object with two references
 
         System.out.println("Engine details:");
