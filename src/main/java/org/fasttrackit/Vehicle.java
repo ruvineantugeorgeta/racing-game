@@ -11,8 +11,30 @@ public class Vehicle {
     double fuelLevel;
     double totalDistance ;
     boolean damaged;
+    double durationInHours;
+    int speed;
+
 
     public double accelerate(double speed, double durationInHours) {
+        if (fuelLevel <= 0) {
+            System.out.println("Not enough fuel.");
+            return 0;
+        }
+
+        if (maxSpead > speed) {
+            System.out.println("Max spead exceedde!");
+            return 0;
+        } else if (speed == maxSpead){
+            System.out.println("Be careful! Max speed reched!");
+        } else {
+            System.out.println("Valid speed entered");
+            // todo: use more fuel if speed > 120
+        }
+            System.out.println(name + " is accelerating with " + speed + " km/h for " + durationInHours + "h");
+        return 0;
+        }
+
+    {
 
         System.out.println(name + " is accelerating whith " + speed + "km/h for " + durationInHours + " h ");
 
@@ -20,6 +42,7 @@ public class Vehicle {
         double travelDistance = speed * durationInHours;
 
         System.out.println("Traveled distance : " + travelDistance);
+
 
         totalDistance += travelDistance;
         System.out.println("Total traveled distance: "+ travelDistance);
@@ -32,7 +55,7 @@ public class Vehicle {
 
         System.out.println("Remaining fuel: " + fuelLevel);
 
-      return travelDistance;
+
 
 
     }
